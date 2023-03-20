@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UK\\Desktop\\Task 5 add\\Task 5.csproj",
+      "projectUniqueName": "C:\\Users\\UK\\Desktop\\Code World\\HomeWorks\\Task 5 (git)\\HomeWork-Task-5-git-\\Task 5.csproj",
       "projectName": "Task 5",
-      "projectPath": "C:\\Users\\UK\\Desktop\\Task 5 add\\Task 5.csproj",
+      "projectPath": "C:\\Users\\UK\\Desktop\\Code World\\HomeWorks\\Task 5 (git)\\HomeWork-Task-5-git-\\Task 5.csproj",
       "packagesPath": "C:\\Users\\UK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UK\\Desktop\\Task 5 add\\obj\\",
+      "outputPath": "C:\\Users\\UK\\Desktop\\Code World\\HomeWorks\\Task 5 (git)\\HomeWork-Task-5-git-\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UK\\AppData\\Roaming\\NuGet\\NuGet.Config",

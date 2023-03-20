@@ -304,7 +304,31 @@
  */
 #endregion
 #region Task 11
+//int sum, digit, temp, digitSum;
 
+//for (int i = 1; i <= 1000; i++)
+//{
+//l1:
+//    sum = 0;
+//    digitSum = 0;
+//    temp = i;
+//    while (temp > 0)
+//    {
+//        digit = temp % 10;
+//        if (digit == 3)
+//        {
+//            i++;
+//            goto l1;
+//        }
+//        digitSum += digit;
+//        sum = sum * 10 + digit;
+//        temp /= 10;
+//    }
+//    if (i == sum && digitSum > 10)
+//    {
+//        Console.WriteLine(i);
+//    }
+//}
 /*
  11) 1-1000 qeder ederlerin icerisinden  ele ededleri cap etki :
        hem polindrom olsun,
@@ -313,7 +337,40 @@
  */
 #endregion
 #region Task 12
-
+//int temp1, temp2, digitSum, digit1, digit2;
+//for (int i = 1; i <= 100000; i++)
+//{
+//    bool allDigitsSame = true;
+//    temp1 = i;
+//    int lastDigit = temp1 % 10;
+//    while (temp1 > 0)
+//    {
+//        digit1 = temp1 % 10;
+//        if (digit1 != lastDigit)
+//        {
+//            allDigitsSame = false;
+//        }
+//        temp1 /= 10;
+//    }
+//l1:
+//    digitSum = 0;
+//    temp2 = i;
+//    while (temp2 > 0)
+//    {
+//        digit2 = temp2 % 10;
+//        if (digit2 == 5)
+//        {
+//            i++;
+//            goto l1;
+//        }
+//        digitSum += digit2;
+//        temp2 /= 10;
+//    }
+//    if (allDigitsSame && digitSum > 5)
+//    {
+//        Console.WriteLine(i);
+//    }
+//}
 /*  }
  12) 1-100000 qeder ederlerin icerisinden  ele ededleri cap etki :
        hem butun reqemleri eyni olsun,
@@ -322,7 +379,42 @@
  */
 #endregion
 #region Task 13
-
+//int sum, digit1, digit2, temp1, temp2, digitSum;
+//for (int i = 1; i <= 100000; i++)
+//{
+//l1:
+//    sum = 0;
+//    digitSum = 0;
+//    temp2 = i;
+//    while (temp2 > 0)
+//    {
+//        digit2 = temp2 % 10;
+//        if (digit2 % 2 == 0)
+//        {
+//            i++;
+//            goto l1;
+//        }
+//        digitSum += digit2;
+//        sum = sum * 10 + digit2;
+//        temp2 /= 10;
+//    }
+//    temp1 = i;
+//    bool hasFive = false;
+//    while (temp1 > 0)
+//    {
+//        digit1 = temp1 % 10;
+//        if (digit1 == 5)
+//        {
+//            hasFive = true;
+//            break;
+//        }
+//        temp1 /= 10;
+//    }
+//    if (i == sum && hasFive)
+//    {
+//        Console.WriteLine(i);
+//    }
+//}
 /*
  13) 1-100000 qeder ederlerin icerisinden  ele ededleri cap etki :
        hem butun reqemleri yalniz tek ededlerden ibaret olsun,
@@ -331,7 +423,56 @@
  */
 #endregion
 #region Task 14
-
+//int digit1, digit2, digit3, temp1, temp2, temp3, digitSum, counter;
+//bool twoFive, twoOne;
+//for (int i = 1; i <= 100000; i++)
+//{
+//    counter = 0;
+//    twoFive = false;
+//    temp1 = i;
+//    while (temp1 > 0)
+//    {
+//        digit1 = temp1 % 10;
+//        if (digit1 == 5)
+//        {
+//            counter++;
+//            if (counter >= 2)
+//            {
+//                twoFive = true;
+//            }
+//        }
+//        temp1 /= 10;
+//    }
+//    temp2 = i;
+//    twoOne = false;
+//    while (temp2 > 0)
+//    {
+//        digit2 = temp2 % 100;
+//        temp2 /= 10;
+//        if (digit2 == 11)
+//        {
+//            twoOne = true;
+//        }
+//    }
+//l1:
+//    digitSum = 0;
+//    temp3 = i;
+//    while (temp3 > 0)
+//    {
+//        digit3 = temp3 % 10;
+//        if (digit3 == 6)
+//        {
+//            i++;
+//            goto l1;
+//        }
+//        digitSum += digit3;
+//        temp3 /= 10;
+//    }
+//    if (digitSum > 7 && digitSum < 15 && twoFive & twoOne)
+//    {
+//        Console.WriteLine(i);
+//    }
+//}
 /*
  14) 1-100000 qeder ederlerin icerisinden  ele ededleri cap etki :
        hem ededin ozunun daxilinde minimum 2 dene 5 olsun,
@@ -342,7 +483,45 @@
  */
 #endregion
 #region Task 15
+//int temp, digit, sum;
+//int[] exclude = { 0, 1, 5, 7, 9 };
 
+//for (int i = 1; i < 10000; i++)
+//{
+//l1:
+//    sum = 0;
+//    if (i % 2 == 0 || (i % 3 == 0 && i != 3) || i % 5 == 0 || i % 7 == 0)
+//    {
+//        continue;
+//    }
+
+//    temp = i;
+//    while (temp > 0)
+//    {
+//        digit = temp % 10;
+
+//        if (Array.IndexOf(exclude, digit) != -1)
+//        {
+//            i++;
+//            goto l1;
+//        }
+
+//        sum += digit;
+//        temp /= 10;
+//    }
+
+//    while (sum > 0)
+//    {
+//        digit = sum % 10;
+//        if (digit == 2)
+//        {
+//            i++;
+//            goto l1;
+//        }
+//        sum /= 10;
+//    }
+//    Console.WriteLine(i);
+//}
 /*
  15)* 1-10000 qeder ederlerin icerisinden  ele ededleri cap etki :
        hem sade eded olsun
