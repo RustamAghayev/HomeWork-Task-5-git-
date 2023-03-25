@@ -483,45 +483,45 @@
  */
 #endregion
 #region Task 15
-//int temp, digit, sum;
-//int[] exclude = { 0, 1, 5, 7, 9 };
+int temp, digit, sum;
+int[] exclude = { 0, 1, 5, 7, 9 };
 
-//for (int i = 1; i < 10000; i++)
-//{
-//l1:
-//    sum = 0;
-//    if (i % 2 == 0 || (i % 3 == 0 && i != 3) || i % 5 == 0 || i % 7 == 0)
-//    {
-//        continue;
-//    }
+for (int i = 1; i < 10000; i++)
+{
+l1:
+    sum = 0;
+    if (i % 2 == 0 || (i % 3 == 0 && i != 3) || i % 5 == 0 || i % 7 == 0)
+    {
+        continue;
+    }
 
-//    temp = i;
-//    while (temp > 0)
-//    {
-//        digit = temp % 10;
+    temp = i;
+    while (temp > 0)
+    {
+        digit = temp % 10;
 
-//        if (Array.IndexOf(exclude, digit) != -1)
-//        {
-//            i++;
-//            goto l1;
-//        }
+        if (Array.IndexOf(exclude, digit) != -1)
+        {
+            i++;
+            goto l1;
+        }
 
-//        sum += digit;
-//        temp /= 10;
-//    }
+        sum += digit;
+        temp /= 10;
+    }
 
-//    while (sum > 0)
-//    {
-//        digit = sum % 10;
-//        if (digit == 2)
-//        {
-//            i++;
-//            goto l1;
-//        }
-//        sum /= 10;
-//    }
-//    Console.WriteLine(i);
-//}
+    while (sum > 0)
+    {
+        digit = sum % 10;
+        if (digit == 2)
+        {
+            i++;
+            goto l1;
+        }
+        sum /= 10;
+    }
+    Console.WriteLine(i);
+}
 /*
  15)* 1-10000 qeder ederlerin icerisinden  ele ededleri cap etki :
        hem sade eded olsun
